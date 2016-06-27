@@ -1,0 +1,16 @@
+{
+    "name": "openag_percent_actuator",
+    "keywords": "openag, actuator",
+    "description": "OpenAg driver for an actuator that can be set to analog values",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenAgInitiative/openag_percent_actuator.git"
+    },
+    "frameworks": "arduino",
+    "platforms": "*",
+    "dependencies": [
+        {
+            "name": "rosserial_arduino"
+        }
+    ]
+}
