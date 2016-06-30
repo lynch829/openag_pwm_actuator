@@ -1,17 +1,17 @@
-#include "openag_percent_actuator.h"
+#include "openag_pwm_actuator.h"
 
-PercentActuator::PercentActuator(int pin, bool is_active_low, float threshold) {
+PwmActuator::PwmActuator(int pin, bool is_active_low, float threshold) {
   _pin = pin;
   _is_active_low = is_active_low;
   _threshold = threshold;
 }
 
-void PercentActuator::begin() {
+void PwmActuator::begin() {
   pinMode(_pin, OUTPUT);
 }
 
-void PercentActuator::set_state(std_msgs::Float32 state) {
-  float val = state.data;
+void PwmActuator::set_cmd(std_msgs::Float32 cmd) {
+  float val = cmd.data;
   if (val < 0 || val > 1) {
     has_error = true;
     error_msg = "Invalid command received";

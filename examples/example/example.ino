@@ -1,21 +1,21 @@
-#include <openag_percent_actuator.h>
+#include <openag_pwm_actuator.h>
 
 #define PIN 6
 
-PercentActuator actuator(PIN, false, 0.5);
+PwmActuator actuator(PIN, false, 0);
 
 void setup() {
   Serial.begin(9600);
   actuator.begin();
 }
 
-std_msgs::Float32 state;
+std_msgs::Float32 cmd;
 
 void loop() {
   if (Serial.available()) {
-    state.data = Serial.parseFloat();
-    Serial.println(state.data);
-    actuator.set_state(state);
+    cmd.data = Serial.parseFloat();
+    Serial.println(cmd.data);
+    actuator.set_cmd(cmd);
   }
   if (actuator.has_error) {
     Serial.print("Error: ");

@@ -1,10 +1,10 @@
 {
-    "name": "openag_percent_actuator",
-    "keywords": "openag, actuator",
-    "description": "OpenAg driver for an actuator that can be set to analog values",
+    "name": "openag_pwm_actuator",
+    "keywords": "openag, pwm, analog, actuator",
+    "description": "OpenAg driver for an actuator that can accept a pwm signal",
     "repository": {
         "type": "git",
-        "url": "https://github.com/OpenAgInitiative/openag_percent_actuator.git"
+        "url": "https://github.com/OpenAgInitiative/openag_pwm_actuator.git"
     },
     "frameworks": "arduino",
     "platforms": "*",

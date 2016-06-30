@@ -1,4 +1,4 @@
-openag\_percent\_actuator
+openag\_pwm\_actuator
 =======================
 
-OpenAg driver for an actuator that can be set to analog values
+OpenAg driver for an actuator that can accept a pwm signal

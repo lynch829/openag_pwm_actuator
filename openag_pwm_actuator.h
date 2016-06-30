@@ -1,13 +1,13 @@
-#ifndef OPENAG_PERCENT_ACTUATOR_H
-#define OPENAG_PERCENT_ACTUATOR_H
+#ifndef OPENAG_PWM_ACTUATOR_H
+#define OPENAG_PWM_ACTUATOR_H
 
 #include "Arduino.h"
 #include <std_msgs/Float32.h>
 
-class PercentActuator {
+class PwmActuator {
   public:
     // Constructor
-    PercentActuator(int pin, bool is_active_low, float threshold);
+    PwmActuator(int pin, bool is_active_low, float threshold);
 
     // Public variables
     bool has_error;
@@ -15,7 +15,7 @@ class PercentActuator {
 
     // Public functions
     void begin();
-    void set_state(std_msgs::Float32 state);
+    void set_cmd(std_msgs::Float32 cmd);
 
   private:
     // Private variables
