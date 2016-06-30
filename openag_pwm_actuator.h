@@ -15,6 +15,7 @@ class PwmActuator {
 
     // Public functions
     void begin();
+    void update();
     void set_cmd(std_msgs::Float32 cmd);
 
   private:

@@ -10,6 +10,8 @@ void PwmActuator::begin() {
   pinMode(_pin, OUTPUT);
 }
 
+void PwmActuator::update() { }
+
 void PwmActuator::set_cmd(std_msgs::Float32 cmd) {
   float val = cmd.data;
   if (val < 0 || val > 1) {

@@ -12,6 +12,8 @@ void setup() {
 std_msgs::Float32 cmd;
 
 void loop() {
+  actuator.update();
+
   if (Serial.available()) {
     cmd.data = Serial.parseFloat();
     Serial.println(cmd.data);
